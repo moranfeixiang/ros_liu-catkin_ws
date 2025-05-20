@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/devel
+
+Name: hello_ros
+Description: Description of hello_ros
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

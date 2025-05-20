@@ -1,0 +1,14 @@
+<launch>
+  <!-- package名 -->
+<node
+    pkg="hello_ros"
+    <!-- package内的可执行程序名 -->
+    type="hello_ros_node"
+    <!-- 节点名，如果不指定，就是cpp内的名字 -->
+    name="hello_ros_node"
+    <!-- 必要节点：如果该节点退出，launch文件将终止所有节点 -->
+    required="true"
+    <!-- 将日志输出到当前屏幕 -->
+    output="screen"
+/>
+</launch>

@@ -1,13 +1,13 @@
 <launch>
-  <!-- // <param>标签用于设置单个参数 -->
+  <!-- <param>标签用于设置单个参数 -->
   <param name="turtle_number" value="2"/>
-  <!-- // <arg>标签用于定于launch中的变量，供后面使用，与<node>的args区分！ -->
+  <!-- <arg>标签用于定于 launch 中的变量，供后面使用，与<node>的args区分！ -->
   <arg name="TurtlesimName1" default="Tom"/>
   <arg name="TurtlesimName2" default="Jerry"/>
-  <!-- // <node>的respawn表示当前节点如果挂了，会被自动拉起来，即可重启 -->
+  <!-- <node>的respawn表示当前节点如果挂了，会被自动拉起来，即可重启 -->
   <node pkg="turtlesim" type="turtlesim_node" name="sim_node1" respawn="true">
     <remap from="turtle1" to="sim_node1"/>
-    <!-- // 使用 arg 变量，设置节点参数 -->
+    <!-- 使用 arg 变量，设置节点参数 -->
     <param name="turtle_name" value="$(arg TurtlesimName1)"/>
   </node>
 

@@ -146,8 +146,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/mofei/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/mofei/catkin_ws/build/trd_driver/cmake_install.cmake")
-  include("/home/mofei/catkin_ws/build/mbot_description/cmake_install.cmake")
+  include("/home/mofei/catkin_ws/build/hello_ros/cmake_install.cmake")
 
 endif()
 
