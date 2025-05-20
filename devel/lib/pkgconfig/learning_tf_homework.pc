@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/devel
+
+Name: learning_tf_homework
+Description: Description of learning_tf_homework
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

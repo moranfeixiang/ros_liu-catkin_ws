@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "learning_launch")
 set(learning_launch_VERSION "0.0.0")
-set(learning_launch_MAINTAINER "mofei <mofei@todo.todo>")
+set(learning_launch_MAINTAINER "mofei <moranfeixiang@qq.com>")
 set(learning_launch_PACKAGE_FORMAT "2")
 set(learning_launch_BUILD_DEPENDS "roscpp" "rospy")
 set(learning_launch_BUILD_EXPORT_DEPENDS "roscpp" "rospy")
