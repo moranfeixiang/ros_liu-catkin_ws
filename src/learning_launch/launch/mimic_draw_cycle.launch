@@ -1,0 +1,30 @@
+<launch>
+    <!-- <launch>和</launch>标签是launch文件的起止 -->
+
+    <!-- <group>是组标签，group使用命名空间 ns 区分 -->
+    <!-- 两个 turtlesim_node 分为位于各自的group内，其名称会使用命名空间进行区分 -->
+    <group ns="turtlesim1">
+        <!-- <node> 用于启动节点 -->
+        <!-- pkg：节点所在的软件包 -->
+        <!-- name: 节点运行时名称 -->
+        <!-- type: 节点的可执行文件名称 -->
+        <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+    </group>
+
+    <group ns="turtlesim2">
+        <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+    </group>
+
+    <node pkg="turtlesim" name="mimic" type="mimic">
+        <!-- <remap>重映射ros的计算图源名称 -->
+        <!-- 这句是把 mimic 的带 input 的计算图源，一律改为带 turtlesim1/turtle1，其实主要是几个 topic 名的改动 -->
+        <!-- 这说明<remap>不一定需要写全计算图源名称 -->
+        <remap from="input" to="turtlesim1/turtle1"/>
+        <remap from="output" to="turtlesim2/turtle1"/>
+    </node>
+
+    <node 
+        pkg="rostopic" type="rostopic" name="rostopic" required="true" 
+        args="pub /turtlesim1/turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, -1.8]'"
+    />
+</launch>

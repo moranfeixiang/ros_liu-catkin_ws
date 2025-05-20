@@ -1,0 +1,20 @@
+<launch>
+  // 设置ros的全局参数robot_description，指定机器人模型文件
+  <param name="robot_description" textfile="$(find mbot_description)/urdf/mbot_base.urdf" />
+
+	<!-- 设置GUI参数，显示关节控制插件 -->
+	// 用这个可以控制机器人关节，但本文的demo没看到这个，有点遗憾
+	<param name="use_gui" value="true"/>
+
+	<!-- 运行joint_state_publisher节点，发布机器人的关节状态  -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+	<!-- 运行robot_state_publisher节点，发布tf  -->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+	// robot_state_publisher结合joint_state_publisher可以实时把机器人各关节和各坐标系关系发布出来，让rviz显示。如果不设置，rviz无法完整加载机器人模型。
+	// rviz显示后会生成配置文件，保存后再打开，就不用频繁设置了。
+	<!-- 运行rviz可视化界面 -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find mbot_description)/config/mbot_urdf.rviz" required="true" />
+
+</launch>

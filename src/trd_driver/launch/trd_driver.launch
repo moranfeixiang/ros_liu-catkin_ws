@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="trd_driver" type="hello_world_node" name="hello_world_node">
+    </node>
+</launch>

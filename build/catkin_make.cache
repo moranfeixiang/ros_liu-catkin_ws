@@ -1,0 +1,2 @@
+begginer_tutorials:learning_launch:mbot_description:mbot_gazero:trd_driver
+-DCATKIN_DEVEL_PREFIX=/home/mofei/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mofei/catkin_ws/install -G Unix Makefiles
