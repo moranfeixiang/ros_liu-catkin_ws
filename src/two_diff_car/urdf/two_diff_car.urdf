@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="two_diff_car">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00061402 0.010592 7.3579E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.07195" />
+      <inertia
+        ixx="1.7544E-05"
+        ixy="-1.877E-07"
+        ixz="-5.8483E-21"
+        iyy="5.253E-05"
+        iyz="5.6668E-23"
+        izz="3.969E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_Link">
+    <inertial>
+      <origin
+        xyz="0.0075 0 3.4694E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0047124" />
+      <inertia
+        ixx="2.3562E-07"
+        ixy="-6.8299E-40"
+        ixz="1.1479E-39"
+        iyy="2.0617E-07"
+        iyz="0"
+        izz="2.0617E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.025 0.015 0"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_Link">
+    <inertial>
+      <origin
+        xyz="0.0075 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0047124" />
+      <inertia
+        ixx="2.3562E-07"
+        ixy="1.0066E-24"
+        ixz="-6.7464E-24"
+        iyy="2.0617E-07"
+        iyz="-6.6174E-24"
+        izz="2.0617E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.025 -0.015 0"
+      rpy="-1.9639 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="forward_Link_1">
+    <inertial>
+      <origin
+        xyz="2.0723E-11 -0.0026657 7.1151E-20"
+        rpy="0 0 0" />
+      <mass
+        value="0.00035103" />
+      <inertia
+        ixx="6.1616E-09"
+        ixy="1.5732E-16"
+        ixz="-4.3864E-15"
+        iyy="2.4351E-09"
+        iyz="-1.1002E-24"
+        izz="4.8495E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/forward_Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/forward_Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="forward_Joint_1"
+    type="continuous">
+    <origin
+      xyz="0.025 0 0"
+      rpy="-1.5708 0 0.00039905" />
+    <parent
+      link="base_link" />
+    <child
+      link="forward_Link_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="forward_Link_2">
+    <inertial>
+      <origin
+        xyz="1.6535E-09 -0.00032964 -4.8663E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0027921" />
+      <inertia
+        ixx="1.4959E-07"
+        ixy="1.1563E-13"
+        ixz="-3.844E-14"
+        iyy="1.0229E-07"
+        iyz="4.1601E-13"
+        izz="9.5915E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/forward_Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_diff_car/meshes/forward_Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="forward_Joint_2"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="forward_Link_1" />
+    <child
+      link="forward_Link_2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <!-- GAZEBO PLUGINS FOR DIFF DRIVE -->
+<gazebo>
+  <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <ros>
+      <namespace>/</namespace>uu
+      <remapping>cmd_vel:=/cmd_vel</remapping>
+      <remapping>odom:=/odom</remapping>
+    </ros>
+    <robotNamespace>/</robotNamespace>
+    <leftJoint>left_Joint</leftJoint>
+    <rightJoint>right_Joint</rightJoint>
+    <wheelSeparation>0.03</wheelSeparation> <!-- left/right wheel y 距离的一半 + 一半 -->
+    <wheelDiameter>0.05</wheelDiameter> <!-- 估算轮子直径 -->
+    <torque>5.0</torque>
+    <commandTopic>/cmd_vel</commandTopic>
+    <odometryTopic>/odom</odometryTopic>
+    <odometryFrame>odom</odometryFrame>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <publishTf>true</publishTf>
+    <legacyMode>false</legacyMode>
+    <updateRate>50</updateRate>
+  </plugin>
+</gazebo>
+
+</robot>

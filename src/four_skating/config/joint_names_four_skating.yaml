@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'left_forward_Joint_1', 'left_forward_Joint_2', 'left_forward_lun', 'right_forward_Joint_1', 'right_forward_Joint_2', 'right_forward_lun', 'left_backward_Joint_1', 'left_backward_Joint_2', 'left_backward_lun', 'right_backward_Joint_1', 'right_backward_Joint_2', 'right_backward_lun', ]
