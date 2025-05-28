@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/devel
+
+Name: 2_whole_urdf
+Description: Description of 2_whole_urdf
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

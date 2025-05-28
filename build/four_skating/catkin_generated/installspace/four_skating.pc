@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/install
+
+Name: four_skating
+Description: Description of four_skating
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

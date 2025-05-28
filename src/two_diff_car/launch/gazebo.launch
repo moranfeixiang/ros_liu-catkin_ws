@@ -12,6 +12,8 @@
     type="spawn_model"
     args="-file $(find two_diff_car)/urdf/two_diff_car.urdf -urdf -model two_diff_car"
     output="screen" />
+  
+  <!-- 在 gazebo 中显示机器人模型 -->
   <node
     name="fake_joint_calibration"
     pkg="rostopic"

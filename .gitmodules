@@ -1,0 +1,12 @@
+[submodule "src/diffbot"]
+	path = src/diffbot
+	url = https://github.com/ros-mobile-robots/diffbot
+[submodule "src/pr2_common"]
+	path = src/pr2_common
+	url = https://github.com/PR2/pr2_common
+[submodule "src/ros1_moveit_gazebo"]
+	path = src/ros1_moveit_gazebo
+	url = https://github.com/maindraster/ros1_moveit_gazebo
+[submodule "src/turtlebot3_simulations"]
+	path = src/turtlebot3_simulations
+	url = https://github.com/ROBOTIS-GIT/turtlebot3_simulations

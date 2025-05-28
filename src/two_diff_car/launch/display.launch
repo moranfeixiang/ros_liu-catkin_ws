@@ -7,6 +7,7 @@
   <param
     name="robot_description"
     textfile="$(find two_diff_car)/urdf/two_diff_car.urdf" />
+  <!-- 发布关节状态和TF -->    
   <node
     name="joint_state_publisher_gui"
     pkg="joint_state_publisher_gui"
@@ -15,9 +16,11 @@
     name="robot_state_publisher"
     pkg="robot_state_publisher"
     type="robot_state_publisher" />
+  <!-- 启动RViz -->  
   <node
     name="rviz"
     pkg="rviz"
     type="rviz"
     args="-d $(find two_diff_car)/two_diff_car_rviz.rviz" />
+   
 </launch>

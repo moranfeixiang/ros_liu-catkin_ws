@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/devel
+
+Name: pr2_msgs
+Description: Description of pr2_msgs
+Version: 1.13.1
+Cflags: -I/home/mofei/catkin_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs geometry_msgs

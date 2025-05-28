@@ -1,0 +1,43 @@
+<launch>
+  <!-- 启动gazebo仿真环境 -->
+  <include file="$(find two_diff_car)/launch/gazebo.launch" />
+  
+  <!-- 启动机器人状态发布器 -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="30.0" />
+  </node>
+  
+  <!-- 启动joint_state_publisher -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <rosparam file="$(find two_diff_car)/config/joint_names_two_diff_car.yaml" command="load" />
+  </node>
+  
+  <!-- 发布激光雷达数据 (如果有的话) -->
+  <!-- <node name="laser_scan_publisher" pkg="sensor_msgs" type="LaserScan" /> -->
+  
+  <!-- 启动move_base节点 -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find two_diff_car)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find two_diff_car)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find two_diff_car)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find two_diff_car)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find two_diff_car)/config/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find two_diff_car)/config/move_base_params.yaml" command="load" />
+  </node>
+  
+  <!-- 启动路径规划和轨迹跟踪节点 -->
+  <node name="path_planner" pkg="two_diff_car" type="path_planner.py" output="screen" />
+  <node name="trajectory_tracker" pkg="two_diff_car" type="trajectory_tracker.py" output="screen" />
+  
+  <!-- 机器人控制器 -->
+  <node name="diff_drive_controller" pkg="two_diff_car" type="diff_drive_controller.py" output="screen">
+    <param name="wheel_base" value="0.5" />
+    <param name="wheel_radius" value="0.1" />
+    <param name="max_linear_vel" value="1.0" />
+    <param name="max_angular_vel" value="2.0" />
+  </node>
+  
+  <!-- rviz可视化 -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find two_diff_car)/rviz/navigation.rviz" required="true" />
+  
+</launch>

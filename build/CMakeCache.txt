@@ -400,11 +400,26 @@ actionlib_DIR:PATH=/opt/ros/noetic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/noetic/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for angles.
+angles_DIR:PATH=/opt/ros/noetic/share/angles/cmake
+
 //Value Computed by CMake
 begginer_tutorials_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/begginer_tutorials
 
 //Value Computed by CMake
 begginer_tutorials_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/begginer_tutorials
+
+//The directory containing a CMake configuration file for bond.
+bond_DIR:PATH=/opt/ros/noetic/share/bond/cmake
+
+//The directory containing a CMake configuration file for bondcpp.
+bondcpp_DIR:PATH=/opt/ros/noetic/share/bondcpp/cmake
+
+//The directory containing a CMake configuration file for camera_calibration_parsers.
+camera_calibration_parsers_DIR:PATH=/opt/ros/noetic/share/camera_calibration_parsers/cmake
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=/opt/ros/noetic/share/camera_info_manager/cmake
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
@@ -412,8 +427,50 @@ catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
 
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/noetic/share/control_msgs/cmake
+
+//The directory containing a CMake configuration file for control_toolbox.
+control_toolbox_DIR:PATH=/opt/ros/noetic/share/control_toolbox/cmake
+
+//The directory containing a CMake configuration file for controller_interface.
+controller_interface_DIR:PATH=/opt/ros/noetic/share/controller_interface/cmake
+
+//The directory containing a CMake configuration file for controller_manager.
+controller_manager_DIR:PATH=/opt/ros/noetic/share/controller_manager/cmake
+
+//The directory containing a CMake configuration file for controller_manager_msgs.
+controller_manager_msgs_DIR:PATH=/opt/ros/noetic/share/controller_manager_msgs/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
+
+//Value Computed by CMake
+diffcar_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffcar
+
+//Value Computed by CMake
+diffcar_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffcar
+
+//The directory containing a CMake configuration file for dynamic_reconfigure.
+dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
+
+//Value Computed by CMake
+four_skating_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/four_skating
+
+//Value Computed by CMake
+four_skating_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/four_skating
+
+//The directory containing a CMake configuration file for gazebo_msgs.
+gazebo_msgs_DIR:PATH=/opt/ros/noetic/share/gazebo_msgs/cmake
+
+//The directory containing a CMake configuration file for gazebo_plugins.
+gazebo_plugins_DIR:PATH=/opt/ros/noetic/share/gazebo_plugins/cmake
+
+//The directory containing a CMake configuration file for gazebo_ros.
+gazebo_ros_DIR:PATH=/opt/ros/noetic/share/gazebo_ros/cmake
+
+//The directory containing a CMake configuration file for gazebo_ros_control.
+gazebo_ros_control_DIR:PATH=/opt/ros/noetic/share/gazebo_ros_control/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/noetic/share/gencpp/cmake
@@ -482,11 +539,20 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=/opt/ros/noetic/share/hardware_interface/cmake
+
 //Value Computed by CMake
 hello_ros_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/hello_ros
 
 //Value Computed by CMake
 hello_ros_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/hello_ros
+
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
+
+//The directory containing a CMake configuration file for joint_limits_interface.
+joint_limits_interface_DIR:PATH=/opt/ros/noetic/share/joint_limits_interface/cmake
 
 //Value Computed by CMake
 learning_launch_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/learning_launch
@@ -494,20 +560,8 @@ learning_launch_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/learning_launch
 //Value Computed by CMake
 learning_launch_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/learning_launch
 
-//Value Computed by CMake
-learning_tf_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/learning_tf
-
-//Value Computed by CMake
-learning_tf_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/learning_tf
-
-//Value Computed by CMake
-learning_tf_homework_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/learning_tf_homework
-
-//Value Computed by CMake
-learning_tf_homework_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/learning_tf_homework
-
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/noetic/lib/libtransmission_interface_loader_plugins.so
 
 //Value Computed by CMake
 mbot_description_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/mbot_description
@@ -524,8 +578,41 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
+//Value Computed by CMake
+moveit_sim_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/ros1_moveit_gazebo/src/moveit_sim
+
+//Value Computed by CMake
+moveit_sim_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/ros1_moveit_gazebo/src/moveit_sim
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/noetic/share/nav_msgs/cmake
+
+//The directory containing a CMake configuration file for nodelet.
+nodelet_DIR:PATH=/opt/ros/noetic/share/nodelet/cmake
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
+
+//Value Computed by CMake
+r2d2_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/r2d2
+
+//Value Computed by CMake
+r2d2_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/r2d2
+
+//The directory containing a CMake configuration file for realtime_tools.
+realtime_tools_DIR:PATH=/opt/ros/noetic/share/realtime_tools/cmake
+
+//Value Computed by CMake
+robot_model_pkg_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/ros1_moveit_gazebo/src/robot_model_pkg
+
+//Value Computed by CMake
+robot_model_pkg_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/ros1_moveit_gazebo/src/robot_model_pkg
+
+//Value Computed by CMake
+ros_robotics_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/ros_robotics
+
+//Value Computed by CMake
+ros_robotics_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/ros_robotics
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
@@ -548,6 +635,9 @@ rosgraph_DIR:PATH=/opt/ros/noetic/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/noetic/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/noetic/share/roslaunch/cmake
+
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/noetic/share/roslib/cmake
 
@@ -563,11 +653,20 @@ rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
 
+//The directory containing a CMake configuration file for smclib.
+smclib_DIR:PATH=/opt/ros/noetic/share/smclib/cmake
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
 
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/opt/ros/noetic/share/std_srvs/cmake
+
+//Value Computed by CMake
+test_urdf_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/test_urdf
+
+//Value Computed by CMake
+test_urdf_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/test_urdf
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/noetic/share/tf2/cmake
@@ -584,17 +683,35 @@ tf2_ros_DIR:PATH=/opt/ros/noetic/share/tf2_ros/cmake
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/noetic/share/tf/cmake
 
+//The directory containing a CMake configuration file for trajectory_msgs.
+trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake
+
+//The directory containing a CMake configuration file for transmission_interface.
+transmission_interface_DIR:PATH=/opt/ros/noetic/share/transmission_interface/cmake
+
 //Value Computed by CMake
 trd_driver_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/trd_driver
 
 //Value Computed by CMake
 trd_driver_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/trd_driver
 
-//The directory containing a CMake configuration file for turtlesim.
-turtlesim_DIR:PATH=/opt/ros/noetic/share/turtlesim/cmake
+//Value Computed by CMake
+two_diff_car_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/two_diff_car
+
+//Value Computed by CMake
+two_diff_car_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/two_diff_car
 
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/noetic/share/urdf/cmake
+
+//Value Computed by CMake
+urdf_gazebo_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/pfl_xm/catkin_urdf_gazebo/src/urdf_gazebo
+
+//Value Computed by CMake
+urdf_gazebo_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/pfl_xm/catkin_urdf_gazebo/src/urdf_gazebo
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/noetic/share/visualization_msgs/cmake
 
 //The directory containing a CMake configuration file for xacro.
 xacro_DIR:PATH=/opt/ros/noetic/share/xacro/cmake
@@ -750,7 +867,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

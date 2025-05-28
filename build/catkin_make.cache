@@ -1,2 +1,2 @@
-begginer_tutorials:hello_ros:learning_launch:learning_tf:learning_tf_homework:mbot_description:trd_driver
+begginer_tutorials:diffcar:four_skating:hello_ros:ros_robotics:two_diff_car
 -DCATKIN_DEVEL_PREFIX=/home/mofei/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mofei/catkin_ws/install -G Unix Makefiles

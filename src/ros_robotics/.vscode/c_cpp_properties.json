@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/mofei/catkin_ws/src/begginer_tutorials/include/**",
+        "/home/mofei/catkin_ws/src/hello_ros/include/**",
+        "/home/mofei/catkin_ws/src/learning_launch/include/**",
+        "/home/mofei/catkin_ws/src/learning_tf/include/**",
+        "/home/mofei/catkin_ws/src/learning_tf_homework/include/**",
+        "/home/mofei/catkin_ws/src/mbot_gazebo/include/**",
+        "/home/mofei/catkin_ws/src/r2d2/include/**",
+        "/home/mofei/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/mofei/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

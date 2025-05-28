@@ -4,6 +4,7 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="two_diff_car">
+  <!-- base_link 底盘-->
   <link
     name="base_link">
     <inertial>
@@ -21,6 +22,9 @@
         izz="3.969E-05" />
     </inertial>
     <visual>
+      <material name="blue">
+          <color rgba="0 0.5 1 1"/>
+      </material>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -44,6 +48,8 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- left_link 左轮-->
   <link
     name="left_Link">
     <inertial>
@@ -61,6 +67,9 @@
         izz="2.0617E-07" />
     </inertial>
     <visual>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0" />
+      </material>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -97,6 +106,8 @@
     <axis
       xyz="1 0 0" />
   </joint>
+  
+  <!-- right_Link 右轮-->  
   <link
     name="right_Link">
     <inertial>
@@ -114,6 +125,9 @@
         izz="2.0617E-07" />
     </inertial>
     <visual>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0" />
+      </material>    
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -150,6 +164,30 @@
     <axis
       xyz="1 0 0" />
   </joint>
+<!-- f
+  <transmission name="left_Joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="left_Joint_motor">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="right_Joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_Joint_motor">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  -->
+  <!-- forward_Link_1 万向轮_1-->
   <link
     name="forward_Link_1">
     <inertial>
@@ -167,6 +205,9 @@
         izz="4.8495E-09" />
     </inertial>
     <visual>
+      <material name="yellow">
+         <color rgba="0.5 0.3 0.0 0.5" />
+      </material>    
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -203,6 +244,8 @@
     <axis
       xyz="0 1 0" />
   </joint>
+
+  <!-- forward_Link_2 万向轮_2-->
   <link
     name="forward_Link_2">
     <inertial>
@@ -220,6 +263,9 @@
         izz="9.5915E-08" />
     </inertial>
     <visual>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0" />
+      </material>    
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -256,7 +302,8 @@
     <axis
       xyz="1 0 0" />
   </joint>
-  <!-- GAZEBO PLUGINS FOR DIFF DRIVE -->
+
+<!-- GAZEBO PLUGINS FOR DIFF DRIVE -->
 <gazebo>
   <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
     <ros>

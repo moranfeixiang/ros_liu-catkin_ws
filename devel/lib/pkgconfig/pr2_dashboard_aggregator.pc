@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/devel
+
+Name: pr2_dashboard_aggregator
+Description: Description of pr2_dashboard_aggregator
+Version: 1.13.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

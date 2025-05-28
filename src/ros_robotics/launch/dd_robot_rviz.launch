@@ -1,0 +1,21 @@
+<launch>
+   <!-- values passed by command line input -->  
+   <!-- 将gui添加到roslaunch命令中，弹出的gui窗口可以改变JointState消息的值(对应改变urdf代码中关节组件的p值) -->   
+   <arg name="model" />
+   <arg name="gui" default="False" />
+
+   <!-- set these parameters on Parameter Server -->
+   <param name="robot_description" textfile="$(find ros_robotics)/urdf/$(arg model)" />
+   <param name="use_gui" value="$(arg gui)"/>
+
+   <!-- 启动了3个ROS节点: joint_state_publisher, robot_state_publisher and rviz -->
+   <!-- 节点joint_state_publisher找到所有非固定关节组件并将其通过JointState消息发布。消息中有转动轮子的常量值 -->
+   <!-- 节点robot_state_publisher订阅了JointState消息，将机器人状态消息发布给tf坐标变换库。-->
+   <!-- 该节点以机器人关节角度为输入，计算出机器人连接杆组件的3D位姿，并将该姿态结果发布出去。该节点采用基于机器人URDF的动力学树状模型。-->
+   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+   <node name="state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ros_robotics)/urdf.rviz" required="true" />
+   <!-- (required = "true") if rviz dies, entire roslaunch will be killed -->
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/devel
+
+Name: diffbot_mbf
+Description: Description of diffbot_mbf
+Version: 1.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -146,13 +146,12 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/mofei/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/mofei/catkin_ws/build/trd_driver/cmake_install.cmake")
+  include("/home/mofei/catkin_ws/build/ros_robotics/cmake_install.cmake")
   include("/home/mofei/catkin_ws/build/begginer_tutorials/cmake_install.cmake")
   include("/home/mofei/catkin_ws/build/hello_ros/cmake_install.cmake")
-  include("/home/mofei/catkin_ws/build/learning_launch/cmake_install.cmake")
-  include("/home/mofei/catkin_ws/build/learning_tf_homework/cmake_install.cmake")
-  include("/home/mofei/catkin_ws/build/learning_tf/cmake_install.cmake")
-  include("/home/mofei/catkin_ws/build/mbot_description/cmake_install.cmake")
+  include("/home/mofei/catkin_ws/build/four_skating/cmake_install.cmake")
+  include("/home/mofei/catkin_ws/build/two_diff_car/cmake_install.cmake")
+  include("/home/mofei/catkin_ws/build/diffcar/cmake_install.cmake")
 
 endif()
 

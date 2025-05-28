@@ -5,10 +5,9 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("trd_driver")
+subdirs("ros_robotics")
 subdirs("begginer_tutorials")
 subdirs("hello_ros")
-subdirs("learning_launch")
-subdirs("learning_tf_homework")
-subdirs("learning_tf")
-subdirs("mbot_description")
+subdirs("four_skating")
+subdirs("two_diff_car")
+subdirs("diffcar")

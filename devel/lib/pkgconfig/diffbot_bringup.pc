@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/devel
+
+Name: diffbot_bringup
+Description: Description of diffbot_bringup
+Version: 1.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
