@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/install
+
+Name: diffbot_msgs
+Description: Description of diffbot_msgs
+Version: 1.1.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs

@@ -164,7 +164,8 @@
     <axis
       xyz="1 0 0" />
   </joint>
-<!-- f
+  
+  <!-- f
   <transmission name="left_Joint_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="left_Joint">
@@ -187,6 +188,7 @@
     </actuator>
   </transmission>
   -->
+  
   <!-- forward_Link_1 万向轮_1-->
   <link
     name="forward_Link_1">
@@ -242,9 +244,6 @@
     <child
       link="forward_Link_1" />
     <axis
-      xyz="0 1 0" />
-  </joint>
-
   <!-- forward_Link_2 万向轮_2-->
   <link
     name="forward_Link_2">
@@ -300,17 +299,11 @@
     <child
       link="forward_Link_2" />
     <axis
-      xyz="1 0 0" />
+      xyz="0 1 0" />
   </joint>
 
 <!-- GAZEBO PLUGINS FOR DIFF DRIVE -->
 <gazebo>
-  <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
-    <ros>
-      <namespace>/</namespace>uu
-      <remapping>cmd_vel:=/cmd_vel</remapping>
-      <remapping>odom:=/odom</remapping>
-    </ros>
     <robotNamespace>/</robotNamespace>
     <leftJoint>left_Joint</leftJoint>
     <rightJoint>right_Joint</rightJoint>

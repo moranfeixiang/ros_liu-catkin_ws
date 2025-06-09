@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/install
+
+Name: urdf01_multi
+Description: Description of urdf01_multi
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,5 @@
+<robot name="my_laser" xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="head.xacro"/>
+  <xacro:include filename="demo01_car_base.urdf.xacro"/>
+  <xacro:include filename="gazebo/move.xacro"/>
+</robot>

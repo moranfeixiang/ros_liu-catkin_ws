@@ -20,6 +20,16 @@ BUILD_GMOCK:BOOL=ON
 //Build dynamically-linked binaries
 BUILD_SHARED_LIBS:BOOL=ON
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+Boost_SYSTEM_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+
+Boost_THREAD_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
 
@@ -400,6 +410,9 @@ actionlib_DIR:PATH=/opt/ros/noetic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/noetic/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for amcl.
+amcl_DIR:PATH=/opt/ros/noetic/share/amcl/cmake
+
 //The directory containing a CMake configuration file for angles.
 angles_DIR:PATH=/opt/ros/noetic/share/angles/cmake
 
@@ -414,6 +427,18 @@ bond_DIR:PATH=/opt/ros/noetic/share/bond/cmake
 
 //The directory containing a CMake configuration file for bondcpp.
 bondcpp_DIR:PATH=/opt/ros/noetic/share/bondcpp/cmake
+
+//The directory containing a CMake configuration file for boost_atomic.
+boost_atomic_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0
+
+//The directory containing a CMake configuration file for boost_thread.
+boost_thread_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0
 
 //The directory containing a CMake configuration file for camera_calibration_parsers.
 camera_calibration_parsers_DIR:PATH=/opt/ros/noetic/share/camera_calibration_parsers/cmake
@@ -444,6 +469,84 @@ controller_manager_msgs_DIR:PATH=/opt/ros/noetic/share/controller_manager_msgs/c
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/noetic/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/opt/ros/noetic/share/diagnostic_updater/cmake
+
+//The directory containing a CMake configuration file for diff_drive_controller.
+diff_drive_controller_DIR:PATH=/opt/ros/noetic/share/diff_drive_controller/cmake
+
+//Value Computed by CMake
+diffbot_base_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_base
+
+//Value Computed by CMake
+diffbot_base_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_base
+
+//Value Computed by CMake
+diffbot_bringup_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_bringup
+
+//The directory containing a CMake configuration file for diffbot_bringup.
+diffbot_bringup_DIR:PATH=/home/mofei/catkin_ws/devel/share/diffbot_bringup/cmake
+
+//Value Computed by CMake
+diffbot_bringup_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_bringup
+
+//Value Computed by CMake
+diffbot_control_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_control
+
+//Value Computed by CMake
+diffbot_control_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_control
+
+//Value Computed by CMake
+diffbot_description_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_description
+
+//Value Computed by CMake
+diffbot_description_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_description
+
+//Value Computed by CMake
+diffbot_gazebo_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_gazebo
+
+//Value Computed by CMake
+diffbot_gazebo_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_gazebo
+
+//Dependencies for the target
+diffbot_hw_interface_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libdiff_drive_controller.so;general;/opt/ros/noetic/lib/libtf.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libcontroller_manager.so;general;/opt/ros/noetic/lib/libcontrol_toolbox.so;general;/opt/ros/noetic/lib/librealtime_tools.so;general;/opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/noetic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/x86_64-linux-gnu/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/noetic/lib/librosconsole_bridge.so;general;/opt/ros/noetic/lib/librosparam_shortcuts.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+
+//Value Computed by CMake
+diffbot_mbf_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_mbf
+
+//Value Computed by CMake
+diffbot_mbf_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_mbf
+
+//Value Computed by CMake
+diffbot_msgs_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_msgs
+
+//The directory containing a CMake configuration file for diffbot_msgs.
+diffbot_msgs_DIR:PATH=/home/mofei/catkin_ws/devel/share/diffbot_msgs/cmake
+
+//Value Computed by CMake
+diffbot_msgs_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_msgs
+
+//Value Computed by CMake
+diffbot_navigation_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_navigation
+
+//Value Computed by CMake
+diffbot_navigation_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_navigation
+
+//Value Computed by CMake
+diffbot_robot_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_robot
+
+//Value Computed by CMake
+diffbot_robot_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_robot
+
+//Value Computed by CMake
+diffbot_slam_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffbot/diffbot_slam
+
+//Value Computed by CMake
+diffbot_slam_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/diffbot/diffbot_slam
 
 //Value Computed by CMake
 diffcar_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/diffcar
@@ -551,8 +654,20 @@ hello_ros_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/hello_ros
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
 
+//The directory containing a CMake configuration file for interactive_markers.
+interactive_markers_DIR:PATH=/opt/ros/noetic/share/interactive_markers/cmake
+
 //The directory containing a CMake configuration file for joint_limits_interface.
 joint_limits_interface_DIR:PATH=/opt/ros/noetic/share/joint_limits_interface/cmake
+
+//The directory containing a CMake configuration file for joint_state_publisher.
+joint_state_publisher_DIR:PATH=/opt/ros/noetic/share/joint_state_publisher/cmake
+
+//The directory containing a CMake configuration file for kdl_parser.
+kdl_parser_DIR:PATH=/opt/ros/noetic/share/kdl_parser/cmake
+
+//The directory containing a CMake configuration file for laser_geometry.
+laser_geometry_DIR:PATH=/opt/ros/noetic/share/laser_geometry/cmake
 
 //Value Computed by CMake
 learning_launch_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/learning_launch
@@ -562,6 +677,12 @@ learning_launch_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/learning_launch
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/libtransmission_interface_loader_plugins.so
+
+//The directory containing a CMake configuration file for map_msgs.
+map_msgs_DIR:PATH=/opt/ros/noetic/share/map_msgs/cmake
+
+//The directory containing a CMake configuration file for map_server.
+map_server_DIR:PATH=/opt/ros/noetic/share/map_server/cmake
 
 //Value Computed by CMake
 mbot_description_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/mbot_description
@@ -577,6 +698,12 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for move_base.
+move_base_DIR:PATH=/opt/ros/noetic/share/move_base/cmake
+
+//The directory containing a CMake configuration file for move_base_msgs.
+move_base_msgs_DIR:PATH=/opt/ros/noetic/share/move_base_msgs/cmake
 
 //Value Computed by CMake
 moveit_sim_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/ros1_moveit_gazebo/src/moveit_sim
@@ -602,17 +729,29 @@ r2d2_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/r2d2
 //The directory containing a CMake configuration file for realtime_tools.
 realtime_tools_DIR:PATH=/opt/ros/noetic/share/realtime_tools/cmake
 
+//The directory containing a CMake configuration file for resource_retriever.
+resource_retriever_DIR:PATH=/opt/ros/noetic/share/resource_retriever/cmake
+
 //Value Computed by CMake
 robot_model_pkg_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/ros1_moveit_gazebo/src/robot_model_pkg
 
 //Value Computed by CMake
 robot_model_pkg_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/ros1_moveit_gazebo/src/robot_model_pkg
 
+//The directory containing a CMake configuration file for robot_state_publisher.
+robot_state_publisher_DIR:PATH=/opt/ros/noetic/share/robot_state_publisher/cmake
+
 //Value Computed by CMake
 ros_robotics_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/ros_robotics
 
 //Value Computed by CMake
 ros_robotics_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/ros_robotics
+
+//The directory containing a CMake configuration file for rosbag.
+rosbag_DIR:PATH=/opt/ros/noetic/share/rosbag/cmake
+
+//The directory containing a CMake configuration file for rosbag_storage.
+rosbag_storage_DIR:PATH=/opt/ros/noetic/share/rosbag_storage/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
@@ -641,14 +780,23 @@ roslaunch_DIR:PATH=/opt/ros/noetic/share/roslaunch/cmake
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/noetic/share/roslib/cmake
 
+//The directory containing a CMake configuration file for roslz4.
+roslz4_DIR:PATH=/opt/ros/noetic/share/roslz4/cmake
+
 //The directory containing a CMake configuration file for rospack.
 rospack_DIR:PATH=/opt/ros/noetic/share/rospack/cmake
+
+//The directory containing a CMake configuration file for rosparam_shortcuts.
+rosparam_shortcuts_DIR:PATH=/opt/ros/noetic/share/rosparam_shortcuts/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
+
+//The directory containing a CMake configuration file for rviz.
+rviz_DIR:PATH=/opt/ros/noetic/share/rviz/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
@@ -671,6 +819,9 @@ test_urdf_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/test_urdf
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/noetic/share/tf2/cmake
 
+//The directory containing a CMake configuration file for tf2_kdl.
+tf2_kdl_DIR:PATH=/opt/ros/noetic/share/tf2_kdl/cmake
+
 //The directory containing a CMake configuration file for tf2_msgs.
 tf2_msgs_DIR:PATH=/opt/ros/noetic/share/tf2_msgs/cmake
 
@@ -682,6 +833,9 @@ tf2_ros_DIR:PATH=/opt/ros/noetic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/noetic/share/tf/cmake
+
+//The directory containing a CMake configuration file for topic_tools.
+topic_tools_DIR:PATH=/opt/ros/noetic/share/topic_tools/cmake
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake
@@ -701,6 +855,12 @@ two_diff_car_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/two_diff_car
 //Value Computed by CMake
 two_diff_car_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/two_diff_car
 
+//Value Computed by CMake
+urdf01_multi_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/urdf01_multi
+
+//Value Computed by CMake
+urdf01_multi_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/urdf01_multi
+
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/noetic/share/urdf/cmake
 
@@ -709,6 +869,12 @@ urdf_gazebo_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/pfl_xm/catkin_urdf_gaz
 
 //Value Computed by CMake
 urdf_gazebo_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/pfl_xm/catkin_urdf_gazebo/src/urdf_gazebo
+
+//Value Computed by CMake
+using_markers_BINARY_DIR:STATIC=/home/mofei/catkin_ws/build/using_markers
+
+//Value Computed by CMake
+using_markers_SOURCE_DIR:STATIC=/home/mofei/catkin_ws/src/using_markers
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/noetic/share/visualization_msgs/cmake
@@ -724,6 +890,8 @@ xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/mofei/catkin_ws/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/mofei/catkin_ws/build/test_results
@@ -867,7 +1035,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -910,6 +1078,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake][cfound components: system thread ][v1.71.0()]
 //Details about finding PY_em
 FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/usr/lib/python3/dist-packages/em.py][v()]
 //Details about finding PythonInterp
@@ -952,6 +1122,14 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON_INSTALL_DIR:INTERNAL=lib/python3/dist-packages
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/home/mofei/catkin_ws/install
+//ADVANCED property for variable: boost_atomic_DIR
+boost_atomic_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_thread_DIR
+boost_thread_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples

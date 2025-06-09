@@ -1,2 +1,2 @@
-begginer_tutorials:diffcar:four_skating:hello_ros:ros_robotics:two_diff_car
+begginer_tutorials:diffbot/diffbot_base:diffbot/diffbot_bringup:diffbot/diffbot_control:diffbot/diffbot_description:diffbot/diffbot_gazebo:diffbot/diffbot_mbf:diffbot/diffbot_msgs:diffbot/diffbot_navigation:diffbot/diffbot_robot:diffbot/diffbot_slam:diffcar:four_skating:hello_ros:ros_robotics:two_diff_car:urdf01_multi:using_markers
 -DCATKIN_DEVEL_PREFIX=/home/mofei/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mofei/catkin_ws/install -G Unix Makefiles

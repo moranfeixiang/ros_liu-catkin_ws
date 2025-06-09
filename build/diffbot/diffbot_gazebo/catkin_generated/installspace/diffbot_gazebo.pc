@@ -1,0 +1,8 @@
+prefix=/home/mofei/catkin_ws/install
+
+Name: diffbot_gazebo
+Description: Description of diffbot_gazebo
+Version: 1.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

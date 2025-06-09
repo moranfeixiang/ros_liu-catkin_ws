@@ -1,0 +1,101 @@
+<robot name="my_base" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- 定义常量（PI）和颜色材料 -->
+    <xacro:property name="PI" value="3.141"/>
+    <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+    <material name="yellow">
+        <color rgba="0.5 0.3 0.0 0.5"/>
+    </material>
+
+  <!-- 底盘属性 -->
+  <xacro:property name="base_footprint_radius" value="0.001"/>
+  <xacro:property name="base_link_radius" value="0.1"/>
+  <xacro:property name="base_link_length" value="0.08"/>
+  <xacro:property name="base_mass" value="2"/>
+  <xacro:property name="map_space" value="0.015"/>
+
+  <!--dipanzhongxindian-->
+  <link name="base_footprint">
+      <visual>
+          <geometry>
+              <sphere radius="${base_footprint_radius}"/>
+          </geometry>
+      </visual>
+  </link>
+
+  <!--dipan-->
+  <link name="base_link">
+     <visual>
+        <geometry>
+            <cylinder radius="${base_link_radius}" length="${base_link_length}"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <material name="yellow"/>
+     </visual>
+     <collision>
+        <geometry>
+            <cylinder radius="${base_link_radius}" length="${base_link_length}"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+     </collision>
+     <xacro:cylinder_inertial_matrix m="${base_mass}" r="${base_link_radius}" h="${base_link_length}"/>
+  </link>
+  <!--lunzi-->
+  <xacro:property name="wheel_radius" value="0.0325"/>
+  <xacro:property name="wheel_length" value="0.015"/>
+  <xacro:property name="wheel_mass" value="0.05"/>
+  
+  <xacro:macro name="driving_wheels" params="name flag">
+    <!-- 驱动轮连杆 -->
+    <link name="base_${name}">
+        <visual>
+            <geometry>
+                <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+        </collision>
+        <xacro:cylinder_inertial_matrix m="${wheel_mass}" r="${wheel_radius}" h="${wheel_length}"/>
+    </link>
+
+    <!-- Gazebo 颜色配置 -->
+    <gazebo reference="base_${name}">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <!-- 驱动轮关节（连续旋转关节） -->
+    <joint name="${name}_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="base_${name}"/>
+        <origin xyz="0 ${flag * base_link_radius} ${-(map_space + base_link_length/2)}"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+ </xacro:macro>
+ <xacro:driving_wheels name="left_wheel" flag="1"/>
+ <xacro:driving_wheels name="right_wheel" flag="-1"/>
+
+
+
+
+
+
+
+
+
+ <gazebo reference="base_link">
+    <material>Gazebo/Yellow</material>
+ </gazebo>
+
+ <joint name="base_link_to_base_footprint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 ${map_space + base_link_length / 2}"/>
+ </joint>
+</robot>
